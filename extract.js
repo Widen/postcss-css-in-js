@@ -2,7 +2,7 @@
 
 const getTemplate = require('./get-template');
 const loadSyntax = require('postcss-syntax/load-syntax');
-const { parse, types, traverse, loadPartialConfig } = require('@babel/core');
+const { parse, types, traverse, loadOptions } = require('@babel/core');
 
 const isStyleSheetCreate = expectAdjacentSibling(['create']);
 const supports = {
@@ -126,7 +126,7 @@ function loadBabelOpts(opts) {
 	let fileOpts;
 
 	try {
-		fileOpts = filename && loadPartialConfig({ filename }).options;
+		fileOpts = filename && loadOptions({ filename });
 	} catch (ex) {
 		//
 	}
