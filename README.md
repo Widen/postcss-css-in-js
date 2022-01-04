@@ -6,6 +6,15 @@
 	title="Philosopher’s stone, logo of PostCSS"
 	src="https://api.postcss.org/logo.svg">
 
+## Fork notes
+
+This project was forked by Widen for two reasons:
+
+1. To fix some peer dependency warnings that don't apply given our setup and cause warnings with Yarn.
+1. To fix Babel parsing. Newer versions of Babel made some non-supported use cases break. We've fixed this to make stylelint work properly.
+
+We will likely not merge our fork into the source repo due to stylelint's desire to deprecate this package eventually.
+
 [PostCSS](https://github.com/postcss/postcss) syntax for parsing [CSS in JS](https://github.com/MicheleBertoli/css-in-js) literals:
 
 - [aphrodite](https://github.com/Khan/aphrodite)
